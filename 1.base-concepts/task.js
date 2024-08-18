@@ -1,12 +1,13 @@
 "use strict";
 function solveEquation(a, b, c) {
-  let arr = [];
   let equation = b ** 2 - 4 * a * c;
-  if (equation == 0) {
-    arr.push(-b / (2 * a));
-  } else {
+  let arr = [];
+  if (equation > 0) {
     arr.push(parseFloat(((-b + Math.sqrt(equation)) / (2 * a)).toFixed(2)));
     arr.push(parseFloat(((-b - Math.sqrt(equation)) / (2 * a)).toFixed(2)));
+  } else if (equation == 0) {
+    arr.push(-b / (2 * a));
+  } else {
   }
   return arr;
 }
