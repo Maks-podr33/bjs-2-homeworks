@@ -7,8 +7,7 @@ function solveEquation(a, b, c) {
     arr.push(parseFloat(((-b - Math.sqrt(equation)) / (2 * a)).toFixed(2)));
   } else if (equation == 0) {
     arr.push(-b / (2 * a));
-  } else {
-  }
+  } 
   return arr;
 }
 
