@@ -1,5 +1,6 @@
 function parseCount(count) {
     let parseCount = Number.parseFloat(count);
+    // console.log(parseC);
 
     if (Number.isNaN(parseCount)) {
         throw new Error("Невалидное значение");
@@ -30,7 +31,9 @@ class Triangle {
     }
     get area() {
         let p = this.perimeter / 2;
-        return parseFloat(Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC)).toFixed(3));
+        return +Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC)).toFixed(3);
+        // return parseFloat(Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - this.sideC)).toFixed(3));
+        
     }
 
 }
